@@ -42,8 +42,7 @@ async def start(client: Pr0fess0r_99, update):
             ]
         ] 
     )                       
-    client.send_photo(
-    chat_id=message.chat.id,
+    client.reply_photo(
     photo=f"{random.choice(PHOTO)}",
     caption="👋Hy {}, Iam Moscow\n\nI cant work in your group",
     parse_mode="html"

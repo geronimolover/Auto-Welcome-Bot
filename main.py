@@ -1,6 +1,7 @@
 import os
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+import random
 
 Pr0fess0r_99= Client(
     "Welcome-Bot",
@@ -8,6 +9,13 @@ Pr0fess0r_99= Client(
      api_id = int(os.environ["API_ID"]),
      api_hash = os.environ["API_HASH"]
 )
+
+PHOTO = [
+    "https://te.legra.ph/file/0acd7e128c2769881823b.png",
+    "https://te.legra.ph/file/c3b1ba5faf6f8a67f00db.png",
+    "https://telegra.ph/Geronimo-10-28",
+    "https://te.legra.ph/file/6e9c01e4773340ce306df.png"
+]
 
 @Pr0fess0r_99.on_message(filters.command("start"))
 async def start(client: Pr0fess0r_99, update):
@@ -36,7 +44,7 @@ async def start(client: Pr0fess0r_99, update):
     )                       
     client.send_photo(
     chat_id=message.chat.id,
-    photo=photo
+    photo=f"{random.choice(PHOTO)}"
     caption="👋Hy {}, Iam Moscow\n\nI cant work in your group"    
 )
 

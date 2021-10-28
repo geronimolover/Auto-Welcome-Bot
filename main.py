@@ -1,5 +1,5 @@
 import os
-from pyrogram import Client, filters
+from pyrogram import Client, filters, bot
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 import random
 
@@ -18,7 +18,7 @@ PHOTO = [
 ]
 
 @Pr0fess0r_99.on_message(filters.command("start"))
-async def start(client: Pr0fess0r_99, update):
+async def start(client: Pr0fess0r_99, update, bot):
     start_msg = "👋Hy {}, Iam Simple Auto Welcome Bot"
     bot_username = await client.get_me()
     link = "PR0FESS0R-99/Auto-Welcome-Bot"

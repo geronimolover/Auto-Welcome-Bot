@@ -11,7 +11,7 @@ Pr0fess0r_99= Client(
 
 @Pr0fess0r_99.on_message(filters.command("start"))
 async def start(client: Pr0fess0r_99, update):
-    start_msg = "👋Hy {}, Iam Simple Auto Welcome Bot\n\nBot Owner Only /admin\n\nMaintained By @Mo_Tech_YT"
+    start_msg = "👋Hy {}, Iam Simple Auto Welcome Bot"
     bot_username = await client.get_me()
     link = "PR0FESS0R-99/Auto-Welcome-Bot"
     reply_markup = InlineKeyboardMarkup(
@@ -19,30 +19,33 @@ async def start(client: Pr0fess0r_99, update):
             [
                 InlineKeyboardButton
                     (
-                         "🤖More Bots", url="t.me/MT_Botz"
+                         "Channel", url="t.me/free_music123"
                     ),
                 InlineKeyboardButton
                     (
-                         "💡Open Source", url="https://github.com/{link}" # PR0FESS0R-99/Auto-Welcome-Bot
+                         "Group", url="t.me/all_super_movies"
                     )
             ],   
             [
                 InlineKeyboardButton
                    (
-                        "➕️ Add Me To Your Chats ➕️", url=f"http://t.me/{bot_username.username}?startgroup=botstart"
+                        "Developer", url=f"http://t.me/geronimo1234"
                    )
             ]
         ] 
     )                       
-    await update.reply_text(
-        text=start_msg.format(update.from_user.mention), reply_markup=reply_markup)
+    client.send_photo(
+    chat_id=message.chat.id,
+    photo=photo
+    caption="👋Hy {}, Iam Moscow\n\nI cant work in your group"    
+)
 
 
 
 @Pr0fess0r_99.on_message(filters.private & filters.command("admin"))
 async def admin(bot: Pr0fess0r_99, update):
     # Heroku Support
-    user = "👋Hey {}, \n You are not the deploy of this bot"
+    user = "👋Hey {}, \n You cant command me!"
     run = "WxJ3G7NBb4c" # https://github.com/PR0FESS0R-99/Auto-Welcome-Bot
     api_key = os.environ.get("APP_NAME", "AutoWelcomeBot")
     DEPLOY = bool(os.environ.get("HOSTED"))
@@ -78,7 +81,7 @@ async def admin(bot: Pr0fess0r_99, update):
             [
                 InlineKeyboardButton
                     (
-                        "💫 DEPLOY NOW 💫", url=f"https://youtu.be/{run}"
+                        "💫 DEVELOPER 💫", url=f"https://t.me/geronimo1234"
                     )
             ]
         ]

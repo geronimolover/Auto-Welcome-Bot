@@ -45,7 +45,8 @@ async def start(client: Pr0fess0r_99, update):
     await update.reply_photo(
     photo=f"{random.choice(PHOTO)}",
     caption="👋Hey,\nIam Moscow\n\nI greet new members in my group\nI cant work in your group\n\nSee you in @all_super_movies",
-    parse_mode="html"
+    parse_mode="html",
+    reply_markup = reply_markup    
 )
 
 

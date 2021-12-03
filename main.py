@@ -1,5 +1,5 @@
 import os
-from pyrogram import Client, filters, bot
+from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 import random
 
@@ -37,7 +37,7 @@ async def start(client: Pr0fess0r_99, update, bot):
             [
                 InlineKeyboardButton
                    (
-                        "Developer", url=f"http://t.me/geronimo1234"
+                        "Status", url=f"http://t.me/all_super_status"
                    )
             ]
         ] 

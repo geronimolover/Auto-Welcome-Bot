@@ -130,12 +130,15 @@ async def auto_welcome(bot: Pr0fess0r_99, msg: Message):
            group_username = None if not msg.chat.username else '@' + msg.chat.username
           ),
        reply_markup=InlineKeyboardMarkup(
-            [
-                InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria')
-            ],
-            [
-                InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
-            ]
+               [
+                   [
+                       InlineKeyboardButton
+                           (
+                               button_name, url=button_link
+                           )
+                   ]  
+               ]
+           )
        )  
        await asyncio.sleep(5)
        await k.delete()

@@ -150,7 +150,8 @@ async def auto_welcome(bot: Pr0fess0r_99, msg: Message):
                ]
            )
        )  
-
+        await asyncio.sleep(5)
+        await k.delete()
 
 print("""Auto Welcome Bot Started
 

@@ -112,7 +112,7 @@ async def auto_welcome(bot: Pr0fess0r_99, msg: Message):
     group_name = msg.chat.title
     group_username = msg.chat.username
     name_button = "🔰 JOIN NOW 🔰"
-    link_button = "t.me/Mo_tech_YT"
+    link_button = "t.me/all_super_movies"
     button_name = os.environ.get("WELCOME_BUTTON_NAME", name_button)
     button_link = os.environ.get("WELCOME_BUTTON_LINK", link_button)
     welcome_text = f"Hey {mention}\nWelcome To {group_name}"
@@ -130,15 +130,13 @@ async def auto_welcome(bot: Pr0fess0r_99, msg: Message):
            group_username = None if not msg.chat.username else '@' + msg.chat.username
           ),
        reply_markup=InlineKeyboardMarkup(
-               [
-                   [
-                       InlineKeyboardButton
-                           (
-                               button_name, url=button_link
-                           )
-                   ]  
-               ]
-           )
+            [
+                InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria')
+            ],
+            [
+                InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
+            ]
+            ]
        )  
        await asyncio.sleep(5)
        await k.delete()
